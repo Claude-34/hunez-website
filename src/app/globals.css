@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal antialiased;
+  }
+}
+
+@layer utilities {
+  /* Wave & Curve Clips */
+  .clip-hero-wave {
+    clip-path: ellipse(120% 90% at 50% 10%);
+  }
+  
+  .clip-bottom-wave {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+  }
+
+  .clip-wave-gentle {
+    clip-path: path("M 0 0 L 100% 0 L 100% 85% Q 50% 100% 0 85% Z");
+  }
+
+  /* Sector Shape System */
+  .shape-arch {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .shape-curved-rect {
+    border-radius: 2.5rem 1rem 2.5rem 1rem;
+  }
+
+  .shape-vertical-frame {
+    border-radius: 2rem;
+  }
+
+  /* Organic Blobs for Impact Statistics */
+  .blob-shape-1 {
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+
+  .blob-shape-2 {
+    border-radius: 40% 60% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  .blob-shape-3 {
+    border-radius: 50% 50% 30% 70% / 40% 60% 40% 60%;
+  }
+
+  /* Rich Organic Section Backgrounds */
+  .bg-cream {
+    background-color: #F5F2EB;
+  }
+
+  .bg-sage {
+    background-color: #E8EFE5;
+  }
+
+  .bg-warm-sand {
+    background-color: #F2ECE1;
+  }
+
+  .bg-forest-gradient {
+    background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);
+  }
+
+  .bg-sage-gradient {
+    background: linear-gradient(180deg, #E8EFE5 0%, #F5F2EB 100%);
+  }
+}
+
+

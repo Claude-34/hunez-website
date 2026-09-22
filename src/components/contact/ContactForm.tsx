@@ -1,3 +1,5 @@
+"use client";
+
 import { useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { helpOptions } from "@/lib/contact-schema";

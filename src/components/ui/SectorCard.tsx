@@ -9,40 +9,28 @@ interface SectorCardProps {
 export function SectorCard({ sector }: SectorCardProps) {
   const getShapeClasses = (shapeType: Sector["shapeType"]) => {
     switch (shapeType) {
-      case "arch":
-        return "shape-arch bg-gradient-to-b from-forest/10 via-white to-white border-t-4 border-forest";
       case "circle":
-        return "rounded-[3rem] bg-gradient-to-br from-olive/15 via-white to-white border-2 border-olive/30";
-      case "curved-rect":
-        return "shape-curved-rect bg-gradient-to-br from-warm/15 via-white to-white border-2 border-warm/30";
-      case "vertical-frame":
-        return "shape-vertical-frame bg-white border-2 border-forest/20 shadow-md";
-      case "standard-rect":
-        return "rounded-xl bg-white border border-olive/20 shadow-sm";
       default:
-        return "rounded-2xl bg-white border border-olive/20";
+        return "rounded-[3rem] bg-gradient-to-br from-olive/15 via-white to-white border-2 border-olive/30 shadow-md hover:border-forest/40 hover:shadow-2xl hover:scale-[1.02]";
     }
   };
 
   return (
     <article
       className={cn(
-        "group flex flex-col justify-between p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1",
+        "group flex flex-col justify-between p-8 transition-all duration-300 hover:-translate-y-1",
         getShapeClasses(sector.shapeType)
       )}
     >
       <div>
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-4">
           <span
             className={cn(
-              "inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full",
+              "inline-block px-3.5 py-1 text-xs font-bold uppercase tracking-wider rounded-full shadow-xs",
               sector.badgeColor || "bg-forest/10 text-forest"
             )}
           >
             {sector.title}
-          </span>
-          <span className="text-xs font-mono text-charcoal/40 uppercase">
-            {sector.shapeType}
           </span>
         </div>
         <h3 className="text-xl font-bold text-forest group-hover:text-olive transition-colors">
@@ -58,7 +46,6 @@ export function SectorCard({ sector }: SectorCardProps) {
 
       <div className="mt-6 pt-4 border-t border-olive/10 flex items-center justify-between text-xs font-bold text-forest">
         <span>Tailored SME Support</span>
-        <span className="group-hover:translate-x-1 transition-transform">→</span>
       </div>
     </article>
   );

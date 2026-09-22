@@ -1,8 +1,7 @@
-import { sectors } from "@/data/sectors";
 import { CTABanner } from "@/components/ui/CTABanner";
-import { SectorCard } from "@/components/ui/SectorCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { RotatingSectorsCircle } from "@/components/sections/RotatingSectorsCircle";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -13,8 +12,8 @@ export const metadata = createPageMetadata({
 export default function WhoWeHelpPage() {
   return (
     <>
-      <SectionWrapper className="pt-16 md:pt-24 pb-20 bg-sage">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+      <SectionWrapper className="pt-16 md:pt-24 pb-20 bg-sage overflow-hidden">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest/10 text-forest text-xs font-bold uppercase tracking-wider mb-3">
             Tailored Industry Expertise
           </span>
@@ -25,11 +24,7 @@ export default function WhoWeHelpPage() {
           />
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {sectors.map((sector) => (
-            <SectorCard key={sector.slug} sector={sector} />
-          ))}
-        </div>
+        <RotatingSectorsCircle />
       </SectionWrapper>
       <CTABanner />
     </>

@@ -8,7 +8,7 @@ export function SectorsPreview() {
   return (
     <SectionWrapper id="sectors" className="py-24 bg-sage">
       <SectionHeading
-        title="Industries Served — Distinctive Shape System"
+        title="Industries Served — Tailored SME Solutions"
         subtitle="Every sector faces unique operational realities. We tailor sustainability strategies to match specific sector challenges, regulatory frameworks, and commercial priorities."
       />
       <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

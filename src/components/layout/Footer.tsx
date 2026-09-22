@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { footerLinks, siteConfig } from "@/data/site";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
@@ -7,6 +8,9 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
+            <div className="mb-4 inline-block rounded-xl bg-cream/95 p-2.5 shadow-md backdrop-blur-sm transition-transform duration-300 hover:scale-105">
+              <Logo size="md" href="/" animate priority={false} />
+            </div>
             <p className="text-lg font-bold">{siteConfig.name}</p>
             <p className="mt-2 text-sm text-white/80">{siteConfig.tagline}</p>
           </div>

@@ -10,6 +10,16 @@
   body {
     @apply bg-cream text-charcoal antialiased;
   }
+
+  /* Global Button & Interactive Element Hover Animations */
+  button,
+  a.button-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  button:hover:not(:disabled) {
+    filter: brightness(1.06);
+  }
 }
 
 @layer utilities {
@@ -76,5 +86,3 @@
     background: linear-gradient(180deg, #E8EFE5 0%, #F5F2EB 100%);
   }
 }
-
-

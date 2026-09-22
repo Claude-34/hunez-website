@@ -18,9 +18,37 @@ export default function AboutPage() {
     <>
       <SectionWrapper className="pt-16 md:pt-24">
         <SectionHeading title={aboutContent.heading} />
-        <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-charcoal/80">
-          {aboutContent.intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+        {/* Justified Visual Blocks */}
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {aboutContent.introBlocks.map((block, idx) => (
+            <article
+              key={block.title}
+              className="group relative flex flex-col justify-between rounded-3xl border border-olive/20 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-forest/40"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="w-12 h-12 rounded-2xl bg-forest/10 text-forest flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                    {block.icon}
+                  </span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-warm px-3.5 py-1 rounded-full bg-warm/10">
+                    {block.badge}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-forest mb-2">
+                  {block.title}
+                </h3>
+                <p className="text-sm text-charcoal/85 leading-relaxed text-justify">
+                  {block.text}
+                </p>
+              </div>
+
+              <div className="mt-6 pt-3 border-t border-olive/10 flex items-center justify-between text-xs font-bold text-forest">
+                <span>Foundation Pillar 0{idx + 1}</span>
+                <span className="group-hover:translate-x-1 transition-transform text-warm">
+                  →
+                </span>
+              </div>
+            </article>
           ))}
         </div>
 

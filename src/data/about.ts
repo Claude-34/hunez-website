@@ -6,6 +6,32 @@ export const aboutContent = {
     "Our approach is informed by experience across environmental science, natural resource management, forest management, community-based conservation, ecological anthropology, and disaster risk reduction management.",
     "This gives us a distinctive perspective on sustainability: environmental challenges cannot be separated from the people, communities and institutions that shape them.",
   ],
+  introBlocks: [
+    {
+      title: "UK SME Sustainability Consultancy",
+      badge: "UK-Based Partner",
+      icon: "🇬🇧",
+      text: "Human-Centred Net Zero & Sustainability Solutions Ltd. is a UK-based sustainability consultancy helping SMEs navigate the transition towards lower-carbon and more sustainable business.",
+    },
+    {
+      title: "Practical & Science-Led Solutions",
+      badge: "Science & Action",
+      icon: "🔬",
+      text: "We combine environmental science, sustainability research and human-centred approaches to develop practical solutions that businesses can understand, implement and maintain.",
+    },
+    {
+      title: "Interdisciplinary Field Experience",
+      badge: "Deep Expertise",
+      icon: "🌳",
+      text: "Our approach is informed by experience across environmental science, natural resource management, forest management, community-based conservation, ecological anthropology, and disaster risk reduction management.",
+    },
+    {
+      title: "Distinctive Human-Centred Perspective",
+      badge: "Human Connection",
+      icon: "👥",
+      text: "This gives us a distinctive perspective on sustainability: environmental challenges cannot be separated from the people, communities and institutions that shape them.",
+    },
+  ],
   mission:
     "To make credible sustainability and net zero support more accessible, practical and achievable for UK SMEs.",
   vision:

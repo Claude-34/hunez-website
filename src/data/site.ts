@@ -18,9 +18,9 @@ export const siteConfig = {
   url: "https://humannetzero.co.uk",
   email: "contact@humannetzero.co.uk",
   phones: ["07311984159", "07375879543"],
-  linkedin: "https://www.linkedin.com/company/human-centred-net-zero",
+  linkedin: "https://www.linkedin.com/company/146601588/",
   sector: "Environmental Consultancy Activities",
-  logo: "/images/logo.jpg",
+  logo: "/images/logo.png",
   ctas: {
     primary: "Start Your Net Zero Journey",
     secondary: "Book a Free Consultation",
@@ -33,6 +33,7 @@ export const navigation = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Who We Help", href: "/who-we-help" },
+  { label: "Courses", href: "/courses" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];

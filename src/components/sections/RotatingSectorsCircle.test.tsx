@@ -19,9 +19,9 @@ describe("RotatingSectorsCircle Component", () => {
 
   it("toggles play and pause rotation button", () => {
     render(<RotatingSectorsCircle />);
-    const pauseBtn = screen.getByRole("button", { name: /Pause Rotation/i });
+    const pauseBtn = screen.getByRole("button", { name: /Pause/i });
     expect(pauseBtn).toBeInTheDocument();
     fireEvent.click(pauseBtn);
-    expect(screen.getByRole("button", { name: /Resume Auto-Rotate/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Resume/i })).toBeInTheDocument();
   });
 });

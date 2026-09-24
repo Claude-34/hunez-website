@@ -18,7 +18,7 @@ export default function WhoWeHelpPage() {
             Tailored Industry Expertise
           </span>
           <SectionHeading
-            title="Sustainability Support Designed for UK SMEs"
+            title="Sustainability Support Designed for SMEs"
             subtitle="Our services are designed particularly for small and medium-sized organisations that need credible sustainability support but may not have dedicated internal environmental teams."
             align="center"
           />

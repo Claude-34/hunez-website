@@ -6,19 +6,19 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Net Zero & Sustainability Services for UK SMEs",
+  title: "Net Zero & Sustainability Services for SMEs",
   path: "/services",
 });
 
 const serviceImages: Record<string, string> = {
-  "net-zero-readiness-assessment": "/images/service-assessment.png",
+  "net-zero-readiness-assessment": "/images/service-site-assessment.jpg",
   "carbon-footprinting": "/images/service-carbon.png",
   "carbon-reduction-roadmaps": "/images/service-roadmap.png",
-  "sustainability-strategy": "/images/hero-sustainability.png",
-  "behaviour-change-employee-engagement": "/images/testimonial-care.png",
+  "sustainability-strategy": "/images/service-community-conservation.jpg",
+  "behaviour-change-employee-engagement": "/images/service-field-research.jpg",
   "nature-positive-business": "/images/green-vegetation-bg.jpg",
-  "greenwashing-risk-review": "/images/testimonial-hospitality.png",
-  "outsourced-sustainability-support": "/images/contact-team.jpg",
+  "greenwashing-risk-review": "/images/service-assessment.png",
+  "outsourced-sustainability-support": "/images/service-environmental-protection.jpg",
 };
 
 export default function ServicesPage() {

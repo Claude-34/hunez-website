@@ -24,7 +24,7 @@ const defaultPrompts = [
 const aiKnowledgeBase: Array<{ keywords: string[]; answer: string; cta?: { label: string; href: string } }> = [
   {
     keywords: ["scope 1", "scope 2", "calculate", "emissions", "footprint"],
-    answer: "Scope 1 covers direct emissions from fuel used onsite (heating gas, company vehicles), while Scope 2 covers indirect emissions from purchased electricity. HUNEZ helps UK SMEs measure both according to GHG Protocol standards and establish verified baselines.",
+    answer: "Scope 1 covers direct emissions from fuel used onsite (heating gas, company vehicles), while Scope 2 covers indirect emissions from purchased electricity. HUNEZ helps SMEs measure both according to GHG Protocol standards and establish verified baselines.",
     cta: { label: "Explore Carbon Footprinting →", href: "/services#carbon-footprinting" },
   },
   {
@@ -95,7 +95,7 @@ export function AIAssistantWidget() {
         sender: "ai",
         text: match
           ? match.answer
-          : "Thank you for asking! HUNEZ provides tailored Net Zero consultancy, Scope 1-3 footprinting, and staff engagement for UK SMEs. Would you like to schedule a free 1-on-1 consultation with Dr Masse or Dr Desmond?",
+          : "Thank you for asking! HUNEZ provides tailored Net Zero consultancy, Scope 1-3 footprinting, and staff engagement for SMEs globally. Would you like to schedule a free 1-on-1 consultation with Dr Masse or Dr Desmond?",
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         cta: match ? match.cta : { label: "Book Free Consultation →", href: "/contact" },
       };

@@ -28,7 +28,7 @@ export const courses: Course[] = [
   {
     id: "course-1",
     slug: "net-zero-essentials-for-smes",
-    title: "Net Zero Essentials for UK SMEs",
+    title: "Net Zero Essentials for SMEs",
     category: "Net Zero & Carbon",
     level: "Beginner",
     duration: "2.5 Hours (Self-Paced)",
@@ -37,8 +37,8 @@ export const courses: Course[] = [
     badge: "Bestseller",
     featured: true,
     summary: "A practical guide to understanding carbon terminology, measuring Scope 1 & 2 emissions, and crafting a credible business Net Zero plan.",
-    description: "Designed specifically for UK SME owners, operations leads, and managers who need to understand carbon accounting without complex jargon. Learn how to calculate your baseline footprint, meet supply chain procurement demands, and unlock cost savings.",
-    targetAudience: "Business owners, operations managers, and sustainability leads in UK SMEs.",
+    description: "Designed specifically for SME owners, operations leads, and managers who need to understand carbon accounting without complex jargon. Learn how to calculate your baseline footprint, meet supply chain procurement demands, and unlock cost savings.",
+    targetAudience: "Business owners, operations managers, and sustainability leads in SMEs globally.",
     certificate: true,
     learningOutcomes: [
       "Understand Scope 1, 2, and 3 carbon emissions clearly",
@@ -51,7 +51,7 @@ export const courses: Course[] = [
         number: "01",
         title: "Demystifying Net Zero & Carbon Standards",
         duration: "30 mins",
-        summary: "Introduction to UK Net Zero targets, SECR, and GHG Protocol basics.",
+        summary: "Introduction to global & national Net Zero targets, SECR, and GHG Protocol basics.",
       },
       {
         number: "02",
@@ -84,13 +84,13 @@ export const courses: Course[] = [
     originalPrice: 179,
     badge: "CPD Certified",
     featured: true,
-    summary: "Cut commercial waste management bills, improve material circularity, and satisfy UK waste duty of care compliance.",
+    summary: "Cut commercial waste management bills, improve material circularity, and satisfy waste duty of care compliance.",
     description: "Learn how to conduct a commercial waste audit, reduce single-use materials, streamline packaging, and transition towards circular material flows that save money and reduce environmental impact.",
     targetAudience: "Facilities managers, procurement leads, hospitality & retail managers.",
     certificate: true,
     learningOutcomes: [
       "Conduct a simple, effective workplace waste audit",
-      "Understand UK Waste Duty of Care legal obligations",
+      "Understand Waste Duty of Care legal obligations",
       "Implement zero-waste-to-landfill strategies",
       "Engage suppliers for sustainable packaging choices",
     ],
@@ -103,7 +103,7 @@ export const courses: Course[] = [
       },
       {
         number: "02",
-        title: "Duty of Care & UK Legal Compliance",
+        title: "Duty of Care & Legal Compliance",
         duration: "45 mins",
         summary: "Navigating waste transfer notes, hazardous waste, and carrier compliance.",
       },

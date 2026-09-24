@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Contact a UK Net Zero & Sustainability Consultant",
+  title: "Contact a Net Zero & Sustainability Consultant",
   path: "/contact",
 });
 
@@ -32,7 +32,7 @@ export default function ContactPage() {
         <div className="relative aspect-[21/9] sm:aspect-[2/1] w-full overflow-hidden rounded-[2.5rem] border-4 border-white shadow-executive bg-white group">
           <Image
             src="/images/contact-team.jpg"
-            alt="HUNEZ sustainability team collaborating with UK SME client"
+            alt="HUNEZ sustainability team collaborating with SME client"
             fill
             priority
             className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -111,7 +111,7 @@ export default function ContactPage() {
           </div>
 
           <div className="pt-4 border-t border-forest/10 text-xs text-charcoal/60 text-center font-medium">
-            Registered UK Business • Sector: {siteConfig.sector}
+            Registered Business • Sector: {siteConfig.sector}
           </div>
         </div>
 

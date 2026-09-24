@@ -16,9 +16,9 @@ import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
   title:
-    "Net Zero & Sustainability Consultancy for UK SMEs | Human-Centred Net Zero",
+    "Net Zero & Sustainability Consultancy for SMEs | Human-Centred Net Zero",
   description:
-    "Practical net zero, carbon reduction and sustainability solutions for UK SMEs. Human-centred, science-led support to help businesses measure, reduce and manage their environmental impact.",
+    "Practical net zero, carbon reduction and sustainability solutions for SMEs. Human-centred, science-led support to help businesses measure, reduce and manage their environmental impact.",
   path: "/",
 });
 

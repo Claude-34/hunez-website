@@ -6,7 +6,7 @@ describe("Short Courses Page", () => {
   it("renders main heading and course cards", () => {
     render(<CoursesPage />);
     expect(screen.getByText("Practical Sustainability Short Courses")).toBeInTheDocument();
-    expect(screen.getByText("Net Zero Essentials for UK SMEs")).toBeInTheDocument();
+    expect(screen.getByText("Net Zero Essentials for SMEs")).toBeInTheDocument();
   });
 
   it("filters courses by category when category tab is clicked", () => {

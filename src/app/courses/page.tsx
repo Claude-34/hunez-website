@@ -36,7 +36,7 @@ export default function CoursesPage() {
           </span>
           <SectionHeading
             title="Practical Sustainability Short Courses"
-            subtitle="Equip your business with actionable Net Zero, carbon accounting, waste reduction, and employee engagement skills. Affordable, CPD-aligned short courses designed for UK SMEs."
+            subtitle="Equip your business with actionable Net Zero, carbon accounting, waste reduction, and employee engagement skills. Affordable, CPD-aligned short courses designed for SMEs."
             align="center"
           />
         </div>
@@ -94,7 +94,7 @@ export default function CoursesPage() {
               Need Tailored Training for Your Business Team?
             </h3>
             <p className="text-sm text-white/80 leading-relaxed">
-              We deliver customized live workshops, executive briefings, and department-specific sustainability training for UK businesses of all sizes.
+              We deliver customized live workshops, executive briefings, and department-specific sustainability training for businesses of all sizes.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 # HUNEZ Website
 
-Marketing website for **Human-Centred Net Zero & Sustainability Solutions Ltd.** — practical, affordable and people-centred sustainability solutions for UK SMEs.
+Marketing website for **Human-Centred Net Zero & Sustainability Solutions Ltd.** — practical, affordable and people-centred sustainability solutions for SMEs globally.
 
 ## Tech stack
 

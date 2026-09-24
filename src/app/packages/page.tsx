@@ -6,7 +6,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Sustainability Packages for UK SMEs",
+  title: "Sustainability Packages for SMEs",
   path: "/packages",
 });
 

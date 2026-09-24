@@ -23,9 +23,9 @@ const badges: TrustBadge[] = [
     description: "Aligned with 1.5°C Trajectory Guidelines",
   },
   {
-    name: "UK SME Hub",
+    name: "SME Climate Hub",
     code: "Climate Commitment",
-    description: "Practical Action Plan Framework for UK Businesses",
+    description: "Practical Action Plan Framework for Businesses Globally",
   },
 ];
 

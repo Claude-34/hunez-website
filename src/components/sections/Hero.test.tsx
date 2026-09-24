@@ -8,7 +8,7 @@ describe("Hero", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /Practical Net Zero Solutions for UK SMEs/i,
+        name: /Practical Net Zero Solutions for SMEs/i,
       }),
     ).toBeInTheDocument();
 

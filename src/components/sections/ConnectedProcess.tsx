@@ -67,7 +67,7 @@ export function ConnectedProcess() {
     <SectionWrapper id="how-it-works" className="relative py-24 bg-sage-gradient">
       <SectionHeading
         title="How HUNEZ Works — Connected Process"
-        subtitle="A clear, structured 4-stage pathway designed specifically for UK SMEs to transition from footprinting to verifiable results."
+        subtitle="A clear, structured 4-stage pathway designed specifically for SMEs to transition from footprinting to verifiable results."
         align="center"
       />
 

@@ -21,7 +21,7 @@ export function SectorsPreview() {
           href="/who-we-help"
           className="inline-flex items-center gap-2 text-sm font-bold text-warm hover:text-warm-light transition-colors px-6 py-3 rounded-full border border-warm/30 bg-warm/5 hover:bg-warm/10"
         >
-          Explore all UK SME sectors we support →
+          Explore all SME sectors we support →
         </Link>
       </div>
     </SectionWrapper>

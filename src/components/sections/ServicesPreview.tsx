@@ -5,10 +5,10 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 
 const serviceImages: Record<string, string> = {
-  "net-zero-readiness-assessment": "/images/service-assessment.png",
+  "net-zero-readiness-assessment": "/images/service-site-assessment.jpg",
   "carbon-footprinting": "/images/service-carbon.png",
   "carbon-reduction-roadmaps": "/images/service-roadmap.png",
-  "sustainability-strategy": "/images/hero-sustainability.png",
+  "sustainability-strategy": "/images/service-community-conservation.jpg",
 };
 
 export function ServicesPreview() {

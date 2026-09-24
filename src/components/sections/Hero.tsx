@@ -30,7 +30,7 @@ export function Hero() {
           </div>
 
           <h1 className="font-heading text-4xl font-extrabold leading-tight text-forest md:text-5xl lg:text-6xl tracking-tight">
-            Practical Net Zero Solutions for UK SMEs
+            Practical Net Zero Solutions for SMEs
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-charcoal/90 font-medium">
@@ -72,7 +72,7 @@ export function Hero() {
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem]">
                 <Image
                   src="/images/hero-sustainability.png"
-                  alt="HUNEZ sustainability consultants working with UK SME client"
+                  alt="HUNEZ sustainability consultants working with SME client"
                   fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"

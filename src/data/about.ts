@@ -1,17 +1,17 @@
 export const aboutContent = {
   heading: "About Human-Centred Net Zero & Sustainability Solutions",
   intro: [
-    "Human-Centred Net Zero & Sustainability Solutions Ltd. is a UK-based sustainability consultancy helping SMEs navigate the transition towards lower-carbon and more sustainable business.",
+    "Human-Centred Net Zero & Sustainability Solutions Ltd. is an international sustainability consultancy helping SMEs navigate the transition towards lower-carbon and more sustainable business.",
     "We combine environmental science, sustainability research and human-centred approaches to develop practical solutions that businesses can understand, implement and maintain.",
     "Our approach is informed by experience across environmental science, natural resource management, forest management, community-based conservation, ecological anthropology, and disaster risk reduction management.",
     "This gives us a distinctive perspective on sustainability: environmental challenges cannot be separated from the people, communities and institutions that shape them.",
   ],
   introBlocks: [
     {
-      title: "UK SME Sustainability Consultancy",
-      badge: "UK-Based Partner",
-      icon: "🇬🇧",
-      text: "Human-Centred Net Zero & Sustainability Solutions Ltd. is a UK-based sustainability consultancy helping SMEs navigate the transition towards lower-carbon and more sustainable business.",
+      title: "Global SME Sustainability Consultancy",
+      badge: "Global Partner",
+      icon: "🌍",
+      text: "Human-Centred Net Zero & Sustainability Solutions Ltd. is an international sustainability consultancy helping SMEs navigate the transition towards lower-carbon and more sustainable business.",
     },
     {
       title: "Practical & Science-Led Solutions",
@@ -33,7 +33,7 @@ export const aboutContent = {
     },
   ],
   mission:
-    "To make credible sustainability and net zero support more accessible, practical and achievable for UK SMEs.",
+    "To make credible sustainability and net zero support more accessible, practical and achievable for SMEs globally, including across Africa, Europe, and beyond.",
   vision:
     "A future where businesses can become more sustainable without sustainability becoming inaccessible, unnecessarily complicated or disconnected from everyday business realities.",
   founders: {
@@ -56,7 +56,7 @@ export const aboutContent = {
     bio: [
       "With a background spanning environmental science, natural resource management, forest management, ecological anthropology, waste management, disaster risks reduction management and urban infrastructures, Dr Omam and Dr Desmond bring an interdisciplinary perspective to sustainability and climate action.",
       "Their research has examined participatory approaches to forest management, sustainable livelihoods, socio-ecological resilience, waste management, disaster risks reduction and urban infrastructures, providing extensive experience of working at the intersection of people, natural resources and environmental change.",
-      "They bring this experience into the UK sustainability sector with a focus on helping SMEs translate sustainability ambitions into practical and achievable action.",
+      "They bring this experience into global sustainability consultancy with a focus on helping SMEs across Africa, Europe, and beyond translate sustainability ambitions into practical and achievable action.",
     ],
     skills: [
       "Sustainability & Net Zero",

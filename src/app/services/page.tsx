@@ -16,7 +16,7 @@ const serviceImages: Record<string, string> = {
   "carbon-reduction-roadmaps": "/images/service-roadmap.png",
   "sustainability-strategy": "/images/service-community-conservation.jpg",
   "behaviour-change-employee-engagement": "/images/service-field-research.jpg",
-  "nature-positive-business": "/images/green-vegetation-bg.jpg",
+  "nature-positive-business": "/images/service-nature-positive.jpg",
   "greenwashing-risk-review": "/images/service-assessment.png",
   "outsourced-sustainability-support": "/images/service-environmental-protection.jpg",
 };

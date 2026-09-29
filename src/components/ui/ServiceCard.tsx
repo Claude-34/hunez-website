@@ -13,7 +13,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({
   service,
-  showLearnMore = true,
+  showLearnMore = false,
   layout = "card",
   imagePosition = "left",
   imageSrc,

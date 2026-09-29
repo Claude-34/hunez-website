@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { AIAssistantWidget } from "@/components/ui/AIAssistantWidget";
+import { FloatingConsultationWidget } from "@/components/ui/FloatingConsultationWidget";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -75,7 +75,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <AIAssistantWidget />
+        <FloatingConsultationWidget />
       </body>
     </html>
   );

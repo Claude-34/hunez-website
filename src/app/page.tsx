@@ -10,6 +10,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { SectorsPreview } from "@/components/sections/SectorsPreview";
 import { WhyHumanCentredSection } from "@/components/sections/WhyHumanCentredSection";
 import { PackagesPreview } from "@/components/sections/PackagesPreview";
+import { PartnersSection } from "@/components/sections/PartnersSection";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { CurvedTransition } from "@/components/ui/CurvedTransition";
 import { createPageMetadata } from "@/lib/metadata";
@@ -62,6 +63,9 @@ export default function HomePage() {
 
       <CurvedTransition fillColor="#F2ECE1" variant="wave" />
       <PackagesPreview />
+
+      {/* Academic & Research Partners Section */}
+      <PartnersSection />
       
       <CTABanner />
     </>

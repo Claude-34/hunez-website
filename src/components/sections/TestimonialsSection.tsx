@@ -26,7 +26,7 @@ export function TestimonialsSection() {
           light
         />
 
-        <div className="mt-14 grid gap-10 md:grid-cols-3">
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
           {testimonials.map((t) => (
             <div key={t.id} className="flex flex-col">
               {/* Speech Bubble Card */}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { aboutContent } from "@/data/about";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { MethodologySteps } from "@/components/ui/MethodologySteps";
+import { PartnersSection } from "@/components/sections/PartnersSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { createPageMetadata } from "@/lib/metadata";
@@ -131,6 +132,9 @@ export default function AboutPage() {
           closing={methodology.closing}
         />
       </SectionWrapper>
+
+      {/* Academic & Research Partners Section */}
+      <PartnersSection />
 
       <CTABanner />
     </>

@@ -7,6 +7,6 @@ describe("TestimonialsSection", () => {
     render(<TestimonialsSection />);
 
     expect(screen.getByText("Eleanor Vance")).toBeInTheDocument();
-    expect(screen.getByText("Marcus Thorne")).toBeInTheDocument();
+    expect(screen.getByText("Kenneth Ekokobe (Fuanke) Nkembeng")).toBeInTheDocument();
   });
 });

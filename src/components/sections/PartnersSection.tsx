@@ -43,7 +43,7 @@ export function PartnersSection() {
           align="center"
         />
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-10 sm:gap-16 md:gap-24 max-w-4xl mx-auto">
           {partners.map((partner) => (
             <a
               key={partner.id}
@@ -51,37 +51,18 @@ export function PartnersSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${partner.name} website (opens in a new tab)`}
-              className="group flex flex-col items-center text-center p-8 rounded-3xl border border-olive/20 bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:border-forest hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-forest/20"
+              title={`${partner.name} — ${partner.category}`}
+              className="group relative flex items-center justify-center p-2 rounded-xl transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest/40"
             >
-              <span className="text-xs font-bold uppercase tracking-wider text-warm px-3.5 py-1 rounded-full bg-warm/10 mb-6 group-hover:bg-warm/20 transition-colors">
-                {partner.category}
-              </span>
-
-              {/* Partner / Sponsor Logo */}
-              <div className="relative h-28 w-64 mb-6 flex items-center justify-center p-4 bg-cream/40 rounded-2xl border border-olive/10 group-hover:bg-white group-hover:border-forest/20 group-hover:scale-105 transition-all">
+              <div className="relative h-20 sm:h-24 md:h-28 w-56 sm:w-64">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 768px) 100vw, 256px"
+                  className="object-contain filter transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:drop-shadow-md"
+                  sizes="(max-width: 640px) 224px, 256px"
                 />
               </div>
-
-              <h3 className="text-xl font-bold text-forest mb-2 group-hover:text-forest-light transition-colors flex items-center gap-1.5">
-                <span>{partner.name}</span>
-                <span className="text-sm font-normal text-warm opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">
-                  ↗
-                </span>
-              </h3>
-              <p className="text-xs text-charcoal/80 leading-relaxed max-w-xs font-medium mb-4 flex-grow">
-                {partner.description}
-              </p>
-
-              <span className="inline-flex items-center gap-1 text-xs font-bold text-forest group-hover:text-warm transition-colors pt-3 border-t border-olive/10 w-full justify-center">
-                <span>Visit Official Website</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </span>
             </a>
           ))}
         </div>

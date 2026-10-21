@@ -31,6 +31,15 @@ export const partners: Partner[] = [
     description:
       "Empowering vulnerable communities, promoting sustainable livelihoods, and driving grassroots social and environmental action.",
   },
+  {
+    id: "global-health-otherwise",
+    name: "Global Health Otherwise",
+    category: "Global Health & Think Tank Partner",
+    logo: "/images/sponsors/global-health-otherwise.png",
+    website: "https://globalhealthotherwise.com/",
+    description:
+      "Advancing health equity through research, policy, science communication, diplomacy, and African-led innovation.",
+  },
 ];
 
 export function PartnersSection() {
@@ -43,7 +52,7 @@ export function PartnersSection() {
           align="center"
         />
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-10 sm:gap-16 md:gap-24 max-w-4xl mx-auto">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 max-w-5xl mx-auto">
           {partners.map((partner) => (
             <a
               key={partner.id}
@@ -54,13 +63,13 @@ export function PartnersSection() {
               title={`${partner.name} — ${partner.category}`}
               className="group relative flex items-center justify-center p-2 rounded-xl transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest/40"
             >
-              <div className="relative h-20 sm:h-24 md:h-28 w-56 sm:w-64">
+              <div className="relative h-20 sm:h-24 md:h-28 w-48 sm:w-56 md:w-60">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   fill
                   className="object-contain filter transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:drop-shadow-md"
-                  sizes="(max-width: 640px) 224px, 256px"
+                  sizes="(max-width: 640px) 192px, 240px"
                 />
               </div>
             </a>

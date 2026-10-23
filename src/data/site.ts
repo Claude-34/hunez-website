@@ -34,7 +34,7 @@ export const navigation = [
   { label: "Services", href: "/services" },
   { label: "Who We Help", href: "/who-we-help" },
   { label: "Courses", href: "/courses" },
-  { label: "Insights", href: "/insights" },
+  { label: "Scientific Contributions & Publications", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
 

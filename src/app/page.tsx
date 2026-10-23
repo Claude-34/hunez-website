@@ -3,13 +3,8 @@ import { TrustBar } from "@/components/ui/TrustBar";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ConnectedProcess } from "@/components/sections/ConnectedProcess";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
-import { CarbonReadinessWidget } from "@/components/ui/CarbonReadinessWidget";
-import { ImpactStatsSection } from "@/components/sections/ImpactStatsSection";
 import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { SectorsPreview } from "@/components/sections/SectorsPreview";
-import { WhyHumanCentredSection } from "@/components/sections/WhyHumanCentredSection";
-import { PackagesPreview } from "@/components/sections/PackagesPreview";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { CurvedTransition } from "@/components/ui/CurvedTransition";
@@ -26,47 +21,35 @@ export const metadata = createPageMetadata({
 export default function HomePage() {
   return (
     <>
+      {/* 1. Hero with Field Photo 1: Site Inspection */}
       <Hero />
       
       {/* Verified Corporate Accreditation & Framework Standards Bar */}
       <TrustBar />
 
+      {/* 2. Problem & Human-Centred Advantage with Field Photo 2: Community Consultation */}
       <ProblemSection />
       
-      {/* Connected 4-Stage Process (Measure → Plan → Reduce → Report) */}
+      {/* 3. Connected 4-Stage Process with Field Photo 3: Stream Measurement */}
       <CurvedTransition fillColor="#E8EFE5" variant="smooth-curve" />
       <ConnectedProcess />
 
-      {/* Alternating Services Layout */}
+      {/* 4. Core Services Grid with Field Photo 4: Rainforest Canopy Science */}
       <CurvedTransition fillColor="#F5F2EB" variant="wave" />
       <ServicesPreview />
 
-      {/* Interactive SME Carbon Readiness Assessment Tool */}
-      <CarbonReadinessWidget />
-
-      {/* Impact Statistics inside Organic Blobs with Eco Vegetation Backdrop */}
-      <ImpactStatsSection />
-
-      {/* Case Studies - Split Before & After Design */}
+      {/* 5. Proven Impact & Case Studies with Field Photo 5: Waterway Cleanup Action */}
       <CurvedTransition fillColor="#F2ECE1" variant="smooth-curve" />
       <CaseStudiesSection />
 
-      {/* Testimonials - Speech Quotation Bubbles in Luxury Dark Forest */}
+      {/* 6. Testimonials in Luxury Dark Forest */}
       <CurvedTransition fillColor="#1B4332" variant="wave" />
       <TestimonialsSection />
 
-      {/* Sectors - Distinctive Shape System */}
-      <CurvedTransition fillColor="#E8EFE5" variant="slope" />
-      <SectorsPreview />
-
-      <WhyHumanCentredSection />
-
-      <CurvedTransition fillColor="#F2ECE1" variant="wave" />
-      <PackagesPreview />
-
-      {/* Academic & Research Partners Section */}
+      {/* 7. Academic & Research Partners (Clean transparent logos) */}
       <PartnersSection />
       
+      {/* 8. Conversion CTA Banner with Field Photo 6: Scientific Operations */}
       <CTABanner />
     </>
   );

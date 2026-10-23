@@ -17,7 +17,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
         <Logo size="md" showText animate priority />
 
-        <nav className="hidden items-center gap-1.5 lg:flex">
+        <nav className="hidden items-center gap-1 xl:gap-1.5 lg:flex">
           {navigation.map((item) => {
             const isActive =
               item.href === "/"
@@ -29,7 +29,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative group px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center justify-center",
+                  "relative group px-2.5 xl:px-3.5 py-2 rounded-full text-xs xl:text-sm font-medium transition-all duration-300 flex items-center justify-center whitespace-nowrap",
                   isActive
                     ? "bg-forest/10 text-forest font-semibold shadow-xs"
                     : "text-charcoal/90 hover:bg-forest/5 hover:text-forest"

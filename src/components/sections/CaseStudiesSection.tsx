@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { caseStudies } from "@/data/case-studies";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
@@ -8,14 +9,63 @@ export function CaseStudiesSection() {
     <SectionWrapper id="case-studies" className="bg-offwhite py-20">
       <SectionHeading
         title="Proven SME Impact — Case Studies"
-        subtitle="Clear before-and-after evidence demonstrating how human-centred net zero strategies deliver both environmental and financial value."
+        subtitle="Clear before-and-after evidence demonstrating how human-centred net zero strategies deliver tangible environmental and commercial value."
       />
 
+      {/* Field Intervention Highlight Banner */}
+      <div className="mt-12 rounded-3xl border border-forest/15 bg-white shadow-xl overflow-hidden">
+        <div className="grid md:grid-cols-12 items-center">
+          <div className="relative h-72 sm:h-80 md:h-full md:min-h-[300px] md:col-span-5">
+            <Image
+              src="/images/field/water-cleanup.jpg"
+              alt="Community field workers in Cameroon waterway deploying debris and waste trap net for ecological remediation"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent md:hidden" />
+            <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md rounded-xl p-2.5 text-white text-xs">
+              <span className="font-semibold text-warm-light">Field Action:</span> Waterway debris mitigation and environmental remediation
+            </div>
+          </div>
+
+          <div className="p-8 sm:p-10 md:col-span-7 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-forest/10 px-3 py-1 text-xs font-bold text-forest mb-3 w-fit">
+              <span className="h-2 w-2 rounded-full bg-forest animate-pulse" />
+              Tangible On-The-Ground Action
+            </div>
+            <h3 className="text-2xl font-bold text-forest sm:text-3xl">
+              Practical Interventions That Produce Measurable Change
+            </h3>
+            <p className="mt-3 text-sm text-charcoal/80 leading-relaxed">
+              Sustainability fails when it remains on paper. Our methodology is honed through direct, physical interventions — from managing natural resources with local communities to re-engineering energy flows in SME facilities.
+            </p>
+
+            {/* 3 Core Impact Statistics */}
+            <div className="mt-6 grid grid-cols-3 gap-3 border-t border-olive/15 pt-5">
+              <div className="rounded-xl bg-forest/5 p-3 text-center border border-forest/10">
+                <span className="block text-xl font-extrabold text-forest sm:text-2xl">32%</span>
+                <span className="mt-1 block text-[11px] font-semibold text-charcoal/70 uppercase">Energy Cut</span>
+              </div>
+              <div className="rounded-xl bg-olive/10 p-3 text-center border border-olive/20">
+                <span className="block text-xl font-extrabold text-olive sm:text-2xl">180t+</span>
+                <span className="mt-1 block text-[11px] font-semibold text-charcoal/70 uppercase">CO₂e Avoided</span>
+              </div>
+              <div className="rounded-xl bg-warm/10 p-3 text-center border border-warm/20">
+                <span className="block text-xl font-extrabold text-warm sm:text-2xl">94%</span>
+                <span className="mt-1 block text-[11px] font-semibold text-charcoal/70 uppercase">Engagement</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Case Study Cards */}
       <div className="mt-12 grid gap-10 lg:grid-cols-2">
         {caseStudies.map((study) => (
           <article
             key={study.id}
-            className="flex flex-col overflow-hidden rounded-2xl border border-olive/20 bg-white shadow-md"
+            className="flex flex-col overflow-hidden rounded-2xl border border-olive/20 bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             {/* Case Study Header */}
             <div className="bg-forest text-white p-6 border-b border-forest-light/30">

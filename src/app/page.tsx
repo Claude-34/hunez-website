@@ -4,7 +4,7 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ConnectedProcess } from "@/components/sections/ConnectedProcess";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
 import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+// import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { CurvedTransition } from "@/components/ui/CurvedTransition";
@@ -42,9 +42,9 @@ export default function HomePage() {
       <CurvedTransition fillColor="#F2ECE1" variant="smooth-curve" />
       <CaseStudiesSection />
 
-      {/* 6. Testimonials in Luxury Dark Forest */}
-      <CurvedTransition fillColor="#1B4332" variant="wave" />
-      <TestimonialsSection />
+      {/* 6. Testimonials (Hidden for now) */}
+      {/* <CurvedTransition fillColor="#1B4332" variant="wave" />
+      <TestimonialsSection /> */}
 
       {/* 7. Academic & Research Partners (Clean transparent logos) */}
       <PartnersSection />

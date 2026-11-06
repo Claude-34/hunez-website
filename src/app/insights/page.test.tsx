@@ -3,17 +3,17 @@ import { describe, expect, it } from "vitest";
 import InsightsPage from "./page";
 import { publications } from "@/data/publications";
 
-describe("Scientific Contributions & Publications Page", () => {
-  it("renders the main heading and scientific publications section", () => {
+describe("Publications Page", () => {
+  it("renders the main heading and publications section", () => {
     render(<InsightsPage />);
     expect(
       screen.getByRole("heading", {
-        name: "Scientific Contributions & Publications",
+        name: "Publications",
       })
     ).toBeInTheDocument();
     expect(
       screen.getByRole("heading", {
-        name: "Scientific Publications",
+        name: "Publications",
         level: 2,
       })
     ).toBeInTheDocument();

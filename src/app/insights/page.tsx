@@ -7,7 +7,7 @@ import { publications } from "@/data/publications";
 
 export const metadata = createPageMetadata({
   title:
-    "Scientific Contributions & Publications | Human-Centred Net Zero",
+    "Publications",
   description:
     "Explore peer-reviewed scientific publications and academic research contributions bridging environmental science, ecological anthropology, and SME net zero action.",
   path: "/insights",
@@ -23,7 +23,7 @@ export default function InsightsPage() {
             Academic &amp; Scientific Contributions
           </span>
           <SectionHeading
-            title="Scientific Contributions & Publications"
+            title="Publications"
             subtitle="Grounding SME sustainability solutions in peer-reviewed environmental science, ecological anthropology, and participatory natural resource governance."
             align="center"
           />

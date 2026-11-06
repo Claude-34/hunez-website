@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-forest/15 bg-cream/95 backdrop-blur-md shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
-        <Logo size="md" showText animate priority />
+        <Logo size="md" showText showAcronym animate priority />
 
         <nav className="hidden items-center gap-1 xl:gap-1.5 lg:flex">
           {navigation.map((item) => {

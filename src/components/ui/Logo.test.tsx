@@ -20,4 +20,17 @@ describe("Logo Component", () => {
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute("href", "/");
   });
+
+  it("renders acronym when showAcronym is true with bounce animation and pan effect", () => {
+    render(<Logo size="md" showAcronym={true} animate={true} />);
+    const acronym = screen.getByLabelText("HUNEZ");
+    expect(acronym).toBeInTheDocument();
+    expect(acronym.className).toContain("animate-bounce");
+    expect(acronym.querySelector(".animate-gradient-pan")).toBeInTheDocument();
+    expect(screen.getByText("H")).toBeInTheDocument();
+    expect(screen.getByText("U")).toBeInTheDocument();
+    expect(screen.getByText("N")).toBeInTheDocument();
+    expect(screen.getByText("E")).toBeInTheDocument();
+    expect(screen.getByText("Z")).toBeInTheDocument();
+  });
 });

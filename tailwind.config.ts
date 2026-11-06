@@ -46,11 +46,17 @@ const config: Config = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(200%)" },
         },
+        gradientPan: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         "logo-float": "logoFloat 5s ease-in-out infinite",
         "logo-glow": "logoGlow 3.5s ease-in-out infinite",
         shimmer: "shimmer 2.5s ease-in-out infinite",
+        "gradient-pan": "gradientPan 4s ease-in-out infinite",
       },
     },
   },

@@ -1,40 +1,28 @@
-import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { FieldDiapoSlider } from "@/components/ui/FieldDiapoSlider";
 
 export function Hero() {
   return (
-    <SectionWrapper className="relative overflow-hidden pt-8 pb-12 md:pt-10 md:pb-16 bg-offwhite">
-      {/* Soft Eco Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/green-vegetation-bg.jpg"
-          alt="Lush green vegetation background"
-          fill
-          priority
-          className="object-cover object-center filter saturate-125 brightness-90 opacity-15"
-          sizes="100vw"
+    <section className="relative w-full overflow-hidden bg-offwhite">
+      {/* Accessible SEO Heading */}
+      <h1 className="sr-only">Practical Net Zero Solutions for SMEs</h1>
+
+      {/* Enlarged End-to-End Full-Bleed Video / Diapo Slider */}
+      <div className="relative w-full overflow-hidden">
+        <FieldDiapoSlider
+          fullWidth
+          width="100%"
+          className="w-full h-[440px] sm:h-[540px] md:h-[640px] lg:h-[720px] xl:h-[780px]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-offwhite via-offwhite/95 to-offwhite" />
+
+        {/* Subtle Bottom Fade Gradient for Seamless Contrast */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-offwhite via-offwhite/50 to-transparent z-20" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl text-center">
-        {/* Accessible SEO Heading */}
-        <h1 className="sr-only">Practical Net Zero Solutions for SMEs</h1>
-
-        {/* Kyoto-Style Diapo Animated Field Slideshow with explicit Length (Height) and Width */}
-        <div className="mx-auto w-full max-w-[1000px]">
-          <FieldDiapoSlider
-            width="100%"
-            height="380px"
-            className="shadow-2xl border-4 border-white/95"
-          />
-        </div>
-
-        {/* Action Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      {/* Action Buttons & Conversion Strip */}
+      <div className="relative z-20 w-full py-6 sm:py-8 bg-offwhite border-b border-forest/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" className="w-full sm:w-auto shadow-lg hover:shadow-glow transition-all">
             {siteConfig.ctas.primary}
           </Button>
@@ -47,6 +35,6 @@ export function Hero() {
           </Button>
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

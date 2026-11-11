@@ -55,14 +55,18 @@ interface FieldDiapoSliderProps {
   className?: string;
   autoPlayInterval?: number; // ms between transitions (default 3600)
   width?: string; // explicit width (default "100%")
-  height?: string; // explicit height / length (default "380px")
+  height?: string; // explicit height / length
+  maxWidth?: string; // optional maxWidth override
+  fullWidth?: boolean; // full-bleed end-to-end mode
 }
 
 export function FieldDiapoSlider({
   className = "",
   autoPlayInterval = 3600,
   width = "100%",
-  height = "380px",
+  height,
+  maxWidth,
+  fullWidth = false,
 }: FieldDiapoSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(0);
@@ -102,13 +106,19 @@ export function FieldDiapoSlider({
   const mosaicRows = 3;
   const mosaicCols = 5;
 
+  const imageSizes = fullWidth ? "100vw" : "(max-width: 1024px) 100vw, 1000px";
+
   return (
     <div
-      className={`relative select-none overflow-hidden rounded-2xl md:rounded-3xl border-4 border-white/95 bg-forest-dark shadow-2xl mx-auto ${className}`}
+      className={
+        fullWidth
+          ? `relative select-none overflow-hidden w-full bg-forest-dark ${className}`
+          : `relative select-none overflow-hidden rounded-2xl md:rounded-3xl border-4 border-white/95 bg-forest-dark shadow-2xl mx-auto ${className}`
+      }
       style={{
         width,
-        height,
-        maxWidth: "1000px",
+        ...(height ? { height } : {}),
+        ...(maxWidth ? { maxWidth } : fullWidth ? {} : { maxWidth: "1000px" }),
       }}
       role="region"
       aria-label="Field Photo Slideshow"
@@ -121,7 +131,7 @@ export function FieldDiapoSlider({
             alt={prevSlide.alt}
             fill
             className="object-cover object-center"
-            sizes="(max-width: 1024px) 100vw, 1000px"
+            sizes={imageSizes}
             priority
           />
         </div>
@@ -147,7 +157,7 @@ export function FieldDiapoSlider({
                       alt={activeSlide.alt}
                       fill
                       className="object-cover object-center"
-                      sizes="(max-width: 1024px) 100vw, 1000px"
+                      sizes={imageSizes}
                     />
                   </div>
                 ))}
@@ -181,7 +191,7 @@ export function FieldDiapoSlider({
                         alt={activeSlide.alt}
                         fill
                         className="object-cover object-center"
-                        sizes="(max-width: 1024px) 100vw, 1000px"
+                        sizes={imageSizes}
                       />
                     </div>
                   );
@@ -207,7 +217,7 @@ export function FieldDiapoSlider({
                       alt={activeSlide.alt}
                       fill
                       className="object-cover object-center"
-                      sizes="(max-width: 1024px) 100vw, 1000px"
+                      sizes={imageSizes}
                     />
                   </div>
                 ))}
@@ -227,7 +237,7 @@ export function FieldDiapoSlider({
                   alt={activeSlide.alt}
                   fill
                   className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 1000px"
+                  sizes={imageSizes}
                 />
               </div>
             )}
@@ -240,7 +250,7 @@ export function FieldDiapoSlider({
               alt={activeSlide.alt}
               fill
               className="object-cover object-center"
-              sizes="(max-width: 1024px) 100vw, 1000px"
+              sizes={imageSizes}
               priority
             />
           </div>

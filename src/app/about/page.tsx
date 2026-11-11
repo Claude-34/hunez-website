@@ -17,62 +17,102 @@ export default function AboutPage() {
 
   return (
     <>
-      <SectionWrapper className="pt-16 md:pt-24">
-        <SectionHeading title={aboutContent.heading} />
-        {/* Justified Visual Blocks */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {aboutContent.introBlocks.map((block, idx) => (
-            <article
-              key={block.title}
-              className="group relative flex flex-col justify-between rounded-3xl border border-olive/20 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-forest/40"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="w-12 h-12 rounded-2xl bg-forest/10 text-forest flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                    {block.icon}
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-warm px-3.5 py-1 rounded-full bg-warm/10">
-                    {block.badge}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-forest mb-2">
-                  {block.title}
-                </h3>
-                <p className="text-sm text-charcoal/85 leading-relaxed text-justify">
-                  {block.text}
-                </p>
-              </div>
-
-              <div className="mt-6 pt-3 border-t border-olive/10 flex items-center justify-between text-xs font-bold text-forest">
-                <span>Foundation Pillar 0{idx + 1}</span>
-                <span className="group-hover:translate-x-1 transition-transform text-warm">
-                  →
-                </span>
-              </div>
-            </article>
-          ))}
+      <SectionWrapper className="pt-16 md:pt-24 pb-14">
+        {/* Header Kicker & Title */}
+        <div className="max-w-4xl">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest/10 text-forest text-xs font-bold uppercase tracking-wider mb-4">
+            About HUNEZ
+          </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-forest tracking-tight leading-tight">
+            {aboutContent.heading}
+          </h1>
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-charcoal/80 max-w-3xl leading-relaxed">
+            Science-led, people-centred sustainability solutions translating complex carbon reduction and environmental governance into practical commercial action for SMEs globally.
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <article className="rounded-3xl border border-forest/20 bg-white p-8 shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-4">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+        {/* Vision & Mission (First, Executive Editorial Layout without Boxes) */}
+        <div className="mt-12 pt-10 border-t border-forest/15 grid gap-8 lg:grid-cols-2">
+          {/* Vision */}
+          <div className="relative pl-6 sm:pl-7 border-l-2 border-forest">
+            <div className="flex items-center gap-2 mb-2.5">
+              <span className="w-2 h-2 rounded-full bg-forest" />
+              <span className="text-xs font-bold uppercase tracking-widest text-forest">
+                Our Vision
+              </span>
             </div>
-            <h3 className="text-xl font-bold text-forest">Our mission</h3>
-            <p className="mt-3 text-charcoal/80 leading-relaxed">{aboutContent.mission}</p>
-          </article>
-          <article className="rounded-3xl border border-olive/20 bg-white p-8 shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-olive/15 flex items-center justify-center text-olive mb-4">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-forest leading-snug tracking-tight">
+              &ldquo;{aboutContent.vision}&rdquo;
+            </p>
+            <p className="mt-2.5 text-xs sm:text-sm text-charcoal/70">
+              Guiding our global decarbonisation roadmaps and client partnerships.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="relative pl-6 sm:pl-7 border-l-2 border-warm">
+            <div className="flex items-center gap-2 mb-2.5">
+              <span className="w-2 h-2 rounded-full bg-warm" />
+              <span className="text-xs font-bold uppercase tracking-widest text-warm">
+                Our Mission
+              </span>
             </div>
-            <h3 className="text-xl font-bold text-forest">Our vision</h3>
-            <p className="mt-3 text-charcoal/80 leading-relaxed">{aboutContent.vision}</p>
-          </article>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-forest leading-snug tracking-tight">
+              &ldquo;{aboutContent.mission}&rdquo;
+            </p>
+            <p className="mt-2.5 text-xs sm:text-sm text-charcoal/70">
+              Delivering accessible, verified sustainability consultancy without greenwashing.
+            </p>
+          </div>
+        </div>
+
+        {/* Company Narrative & Interdisciplinary Approach */}
+        <div className="mt-14 pt-12 border-t border-forest/15">
+          <div className="grid gap-10 lg:grid-cols-12 items-start">
+            {/* Left Column: Heading, Lead & Positioning */}
+            <div className="lg:col-span-5 space-y-4">
+              <span className="text-xs font-bold uppercase tracking-widest text-warm block">
+                Our Foundation &amp; Philosophy
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-forest tracking-tight leading-tight">
+                Grounded in Science. Driven by Human Behaviour.
+              </h2>
+              <p className="text-base sm:text-lg font-medium text-forest/90 leading-relaxed">
+                {aboutContent.intro[0]}
+              </p>
+
+              {/* Trust Badges */}
+              <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold text-forest">
+                <span className="px-3 py-1.5 rounded-full bg-forest/5 border border-forest/15">
+                  Global Reach: Africa &amp; Europe
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-forest/5 border border-forest/15">
+                  GHG Protocol Aligned
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-forest/5 border border-forest/15">
+                  Academic Rigor
+                </span>
+              </div>
+            </div>
+
+            {/* Right Column: In-Depth Narrative with Editorial Pull-Quote */}
+            <div className="lg:col-span-7 space-y-5 text-base sm:text-lg text-charcoal/85 leading-relaxed">
+              <p>{aboutContent.intro[1]}</p>
+              <p>{aboutContent.intro[2]}</p>
+
+              {/* Editorial Pull Quote */}
+              <blockquote className="my-6 pl-5 border-l-3 border-forest/40 bg-forest/5 py-4 pr-4 rounded-r-xl">
+                <p className="text-base sm:text-lg italic font-medium text-forest leading-relaxed">
+                  &ldquo;Environmental challenges cannot be separated from the people, communities and institutions that shape them.&rdquo;
+                </p>
+                <cite className="mt-2 block text-xs not-italic font-bold uppercase tracking-wider text-warm">
+                  — The HUNEZ Foundation Principle
+                </cite>
+              </blockquote>
+
+              <p>{aboutContent.intro[3]}</p>
+            </div>
+          </div>
         </div>
       </SectionWrapper>
 

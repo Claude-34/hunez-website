@@ -25,7 +25,7 @@ describe("RotatingSectorsCircle Component", () => {
     expect(screen.getByRole("button", { name: /Resume/i })).toBeInTheDocument();
   });
 
-  it("renders 3 highlight items as actionable buttons linked to consultation", () => {
+  it("renders 3 highlight items as actionable buttons linked to Google", () => {
     render(<RotatingSectorsCircle />);
     const careBtns = screen.getAllByText("Care & Residential");
     fireEvent.click(careBtns[0]);
@@ -33,7 +33,8 @@ describe("RotatingSectorsCircle Component", () => {
     expect(highlightButtons.length).toBe(3);
     expect(highlightButtons[0]).toHaveAttribute(
       "href",
-      expect.stringContaining("/contact?intent=consultation&sector=care")
+      expect.stringContaining("https://www.google.com/search?q=")
     );
+    expect(highlightButtons[0]).toHaveAttribute("target", "_blank");
   });
 });

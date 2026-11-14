@@ -372,16 +372,18 @@ export function RotatingSectorsCircle() {
             {displayedSector.description}
           </p>
 
-          {/* Highlights as Interactive Action Buttons */}
+          {/* Highlights as Interactive Action Buttons linked to Google */}
           {displayedSector.highlights && (
             <div className="mb-6 sm:mb-8 grid gap-3 sm:grid-cols-3">
               {displayedSector.highlights.map((highlight, idx) => (
-                <Link
+                <a
                   key={idx}
-                  href={`/contact?intent=consultation&sector=${displayedSector.slug}&topic=${encodeURIComponent(highlight)}`}
+                  href={`https://www.google.com/search?q=${encodeURIComponent(highlight)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   role="button"
                   className="group relative rounded-2xl bg-white p-3.5 sm:p-4 border-2 border-olive/20 hover:border-forest hover:bg-forest text-charcoal hover:text-white shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex items-center justify-between gap-2.5 text-left cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-forest/40"
-                  title={`Book consultation on ${highlight}`}
+                  title={`Learn more about ${highlight} on Google (opens in new tab)`}
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <span className="w-6 h-6 rounded-full bg-forest/10 text-forest group-hover:bg-white group-hover:text-forest font-bold text-xs flex items-center justify-center shrink-0 transition-colors shadow-2xs">
@@ -391,10 +393,10 @@ export function RotatingSectorsCircle() {
                       {highlight}
                     </span>
                   </div>
-                  <span className="text-forest/40 group-hover:text-white group-hover:translate-x-1 transition-all text-xs shrink-0 font-bold">
-                    →
+                  <span className="text-forest/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-xs shrink-0 font-bold">
+                    ↗
                   </span>
-                </Link>
+                </a>
               ))}
             </div>
           )}

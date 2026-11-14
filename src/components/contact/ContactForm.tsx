@@ -15,9 +15,11 @@ export function ContactForm() {
   const searchParams = useSearchParams();
   const packageParam = searchParams.get("package") ?? "";
   const intentParam = searchParams.get("intent") ?? "";
+  const topicParam = searchParams.get("topic") ?? searchParams.get("service") ?? "";
+  const sectorParam = searchParams.get("sector") ?? "";
 
   const defaultHelpWith =
-    intentParam === "consultation"
+    intentParam === "consultation" || sectorParam || topicParam
       ? "Free Consultation"
       : packageParam
         ? "Packages & Pricing"
@@ -64,10 +66,18 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <input type="hidden" name="package" value={packageParam} />
       <input type="hidden" name="intent" value={intentParam} />
+      {topicParam && <input type="hidden" name="topic" value={topicParam} />}
+      {sectorParam && <input type="hidden" name="sector" value={sectorParam} />}
 
       {packageParam && packageLabels[packageParam] && (
-        <p className="rounded-md bg-forest/10 px-4 py-3 text-sm text-forest">
+        <p className="rounded-md bg-forest/10 px-4 py-3 text-sm text-forest font-medium">
           Enquiring about: <strong>{packageLabels[packageParam]}</strong>
+        </p>
+      )}
+
+      {topicParam && (
+        <p className="rounded-md bg-forest/10 px-4 py-3 text-sm text-forest font-medium">
+          Enquiring about: <strong>{topicParam}</strong>
         </p>
       )}
 

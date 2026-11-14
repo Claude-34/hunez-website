@@ -24,4 +24,16 @@ describe("RotatingSectorsCircle Component", () => {
     fireEvent.click(pauseBtn);
     expect(screen.getByRole("button", { name: /Resume/i })).toBeInTheDocument();
   });
+
+  it("renders 3 highlight items as actionable buttons linked to consultation", () => {
+    render(<RotatingSectorsCircle />);
+    const careBtns = screen.getAllByText("Care & Residential");
+    fireEvent.click(careBtns[0]);
+    const highlightButtons = screen.getAllByRole("button", { name: /✓/i });
+    expect(highlightButtons.length).toBe(3);
+    expect(highlightButtons[0]).toHaveAttribute(
+      "href",
+      expect.stringContaining("/contact?intent=consultation&sector=care")
+    );
+  });
 });

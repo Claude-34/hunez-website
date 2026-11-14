@@ -20,6 +20,9 @@ export function RotatingSectorsCircle() {
   const [selectedSectorSlug, setSelectedSectorSlug] = useState<string | null>(null);
   const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop">("mobile");
 
+  // Detail panel ref for instant smooth scroll on click
+  const detailPanelRef = useRef<HTMLDivElement>(null);
+
   // Touch swipe tracking
   const touchStartXRef = useRef<number | null>(null);
 
@@ -70,14 +73,48 @@ export function RotatingSectorsCircle() {
     setActiveIndex(closestIdx);
   }, [rotationAngle, total]);
 
-  // Handle clicking on any circular shape
+  // Smoothly scroll directly to what was clicked
+  const scrollToDetail = () => {
+    setTimeout(() => {
+      if (detailPanelRef.current && typeof detailPanelRef.current.scrollIntoView === "function") {
+        detailPanelRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 60);
+  };
+
+  // Handle clicking on any circular shape or sector button
   const handleCircleClick = (index: number, slug: string) => {
     const baseAngle = index * (360 / total);
     const targetAngle = (360 - baseAngle) % 360;
     setRotationAngle(targetAngle);
     setActiveIndex(index);
     setSelectedSectorSlug(slug);
+
+    if (typeof window !== "undefined") {
+      window.history.replaceState(null, "", `#${slug}`);
+    }
+
+    scrollToDetail();
   };
+
+  // Check URL hash on initial load (e.g. /who-we-help#care)
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hashSlug = window.location.hash.replace("#", "");
+      const foundIndex = sectors.findIndex((s) => s.slug === hashSlug);
+      if (foundIndex !== -1) {
+        const baseAngle = foundIndex * (360 / total);
+        const targetAngle = (360 - baseAngle) % 360;
+        setRotationAngle(targetAngle);
+        setActiveIndex(foundIndex);
+        setSelectedSectorSlug(hashSlug);
+        scrollToDetail();
+      }
+    }
+  }, [total]);
 
   // Touch Swipe Handlers for Android & Mobile Gestures
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -280,7 +317,11 @@ export function RotatingSectorsCircle() {
 
       {/* Displaced Detail Display Panel */}
       {displayedSector && (
-        <div className="mt-8 sm:mt-12 max-w-4xl mx-auto rounded-3xl bg-white p-5 sm:p-10 border-2 border-forest/20 shadow-2xl transition-all duration-500 animate-fade-in relative overflow-hidden">
+        <div
+          ref={detailPanelRef}
+          id="sector-details"
+          className="scroll-mt-28 mt-8 sm:mt-12 max-w-4xl mx-auto rounded-3xl bg-white p-5 sm:p-10 border-2 border-forest/20 shadow-2xl transition-all duration-500 animate-fade-in relative overflow-hidden"
+        >
           <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-forest/5 rounded-bl-full pointer-events-none" />
 
           <div className="flex items-start justify-between gap-3 mb-4 sm:mb-6">
@@ -301,34 +342,59 @@ export function RotatingSectorsCircle() {
               </div>
             </div>
 
-            {selectedSectorSlug && (
+            <div className="flex items-center gap-2 shrink-0">
               <button
-                onClick={() => setSelectedSectorSlug(null)}
-                className="text-charcoal/40 hover:text-forest transition-colors p-2 rounded-full hover:bg-offwhite text-base font-bold shrink-0"
-                aria-label="Close detail view"
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+                className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-forest/70 hover:text-forest transition-colors px-2.5 py-1 rounded-full hover:bg-forest/5"
+                title="Scroll back up to rotating circle"
               >
-                ✕
+                <span>↑</span>
+                <span>Orbit</span>
               </button>
-            )}
+
+              {selectedSectorSlug && (
+                <button
+                  onClick={() => setSelectedSectorSlug(null)}
+                  className="text-charcoal/40 hover:text-forest transition-colors p-2 rounded-full hover:bg-offwhite text-base font-bold"
+                  aria-label="Close detail view"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
           </div>
 
           <p className="text-xs sm:text-base text-charcoal/85 leading-relaxed mb-6">
             {displayedSector.description}
           </p>
 
-          {/* Highlights */}
+          {/* Highlights as Interactive Action Buttons */}
           {displayedSector.highlights && (
             <div className="mb-6 sm:mb-8 grid gap-3 sm:grid-cols-3">
               {displayedSector.highlights.map((highlight, idx) => (
-                <div
+                <Link
                   key={idx}
-                  className="rounded-xl bg-sage/40 p-3 sm:p-4 border border-olive/15 flex items-start gap-2"
+                  href={`/contact?intent=consultation&sector=${displayedSector.slug}&topic=${encodeURIComponent(highlight)}`}
+                  role="button"
+                  className="group relative rounded-2xl bg-white p-3.5 sm:p-4 border-2 border-olive/20 hover:border-forest hover:bg-forest text-charcoal hover:text-white shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex items-center justify-between gap-2.5 text-left cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-forest/40"
+                  title={`Book consultation on ${highlight}`}
                 >
-                  <span className="text-forest font-bold text-xs shrink-0">✓</span>
-                  <span className="text-[11px] sm:text-xs font-medium text-charcoal/90 leading-tight">
-                    {highlight}
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <span className="w-6 h-6 rounded-full bg-forest/10 text-forest group-hover:bg-white group-hover:text-forest font-bold text-xs flex items-center justify-center shrink-0 transition-colors shadow-2xs">
+                      ✓
+                    </span>
+                    <span className="text-xs sm:text-[13px] font-semibold leading-snug group-hover:text-white transition-colors">
+                      {highlight}
+                    </span>
+                  </div>
+                  <span className="text-forest/40 group-hover:text-white group-hover:translate-x-1 transition-all text-xs shrink-0 font-bold">
+                    →
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           )}

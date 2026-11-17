@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Human-Centred Net Zero & Sustainability Solutions Ltd.",
-  fullName: "Human-Centred Net Zero & Sustainability Solutions",
+  fullName: "Human-Centred Net Zero & Sustainability Solutions Ltd.",
   shortName: "Human-Centred Net Zero",
   acronym: "HUNEZ",
   description:

@@ -151,7 +151,7 @@ export function Logo({
 
       {/* Optional Side Text */}
       {showText && (
-        <div className="flex flex-col max-w-[190px] sm:max-w-[240px] md:max-w-[270px] lg:max-w-[290px]">
+        <div className="flex flex-col max-w-[190px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[310px]">
           <span className={cn("text-forest transition-colors group-hover:text-forest-light", currentSize.title)}>
             {siteConfig.fullName}
           </span>

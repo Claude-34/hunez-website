@@ -1,10 +1,11 @@
 export const siteConfig = {
   name: "Human-Centred Net Zero & Sustainability Solutions Ltd.",
+  fullName: "Human-Centred Net Zero & Sustainability Solutions",
   shortName: "Human-Centred Net Zero",
   acronym: "HUNEZ",
   description:
     "Practical, affordable and people-centred sustainability solutions for SMEs globally.",
-  positioning: "Science. People. Business.",
+  positioning: "Small Steps, Infinite Impact",
   tagline: "Practical Net Zero. Sustainable Business. Human-Centred Change.",
   differentiator:
     "We bring together environmental science, carbon management and an understanding of people and behaviour to help SMEs turn sustainability ambitions into practical action.",

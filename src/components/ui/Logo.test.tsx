@@ -11,7 +11,8 @@ describe("Logo Component", () => {
 
   it("renders brand name text when showText is true", () => {
     render(<Logo size="md" showText={true} />);
-    expect(screen.getByText("Human-Centred Net Zero")).toBeInTheDocument();
+    expect(screen.getByText("Human-Centred Net Zero & Sustainability Solutions")).toBeInTheDocument();
+    expect(screen.getByText("Small Steps, Infinite Impact")).toBeInTheDocument();
   });
 
   it("links to home page by default", () => {

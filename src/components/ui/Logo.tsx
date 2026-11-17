@@ -18,38 +18,38 @@ interface LogoProps {
 
 const sizeConfig = {
   sm: {
-    container: "gap-2 sm:gap-2.5",
-    acronym: "text-base sm:text-lg",
-    image: "h-10 sm:h-12 w-auto",
-    title: "text-xs font-bold leading-tight",
-    subtitle: "text-[10px]",
+    container: "gap-1.5 sm:gap-2",
+    acronym: "text-sm sm:text-base",
+    image: "h-8 sm:h-10 w-auto",
+    title: "text-[10px] font-bold leading-tight",
+    subtitle: "text-[8.5px] font-medium",
     width: 120,
     height: 61,
   },
   md: {
-    container: "gap-2.5 sm:gap-3",
-    acronym: "text-lg sm:text-xl lg:text-2xl",
-    image: "h-14 sm:h-16 lg:h-18 w-auto",
-    title: "text-sm sm:text-base font-bold leading-tight",
-    subtitle: "text-xs opacity-75",
+    container: "gap-2 sm:gap-2.5 lg:gap-3",
+    acronym: "text-base sm:text-lg lg:text-xl",
+    image: "h-10 sm:h-12 lg:h-14 w-auto",
+    title: "text-[11px] sm:text-xs lg:text-[13px] font-bold leading-tight sm:leading-snug",
+    subtitle: "text-[9px] sm:text-[10px] lg:text-[11px] opacity-75 font-medium tracking-tight",
     width: 180,
     height: 92,
   },
   lg: {
     container: "gap-3 sm:gap-4",
-    acronym: "text-xl sm:text-2xl lg:text-3xl",
-    image: "h-18 sm:h-22 lg:h-26 w-auto",
-    title: "text-base sm:text-lg font-bold leading-tight",
-    subtitle: "text-xs sm:text-sm opacity-80",
+    acronym: "text-lg sm:text-xl lg:text-2xl",
+    image: "h-14 sm:h-16 lg:h-20 w-auto",
+    title: "text-sm sm:text-base font-bold leading-snug",
+    subtitle: "text-xs opacity-80 font-medium",
     width: 240,
     height: 123,
   },
   xl: {
     container: "gap-4 sm:gap-5",
     acronym: "text-2xl sm:text-3xl lg:text-4xl",
-    image: "h-24 sm:h-32 lg:h-36 w-auto",
-    title: "text-xl sm:text-2xl font-bold leading-tight",
-    subtitle: "text-sm sm:text-base opacity-80",
+    image: "h-20 sm:h-28 lg:h-32 w-auto",
+    title: "text-base sm:text-lg font-bold leading-snug",
+    subtitle: "text-xs sm:text-sm opacity-80 font-medium",
     width: 320,
     height: 163,
   },
@@ -151,11 +151,11 @@ export function Logo({
 
       {/* Optional Side Text */}
       {showText && (
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-[190px] sm:max-w-[240px] md:max-w-[270px] lg:max-w-[290px]">
           <span className={cn("text-forest transition-colors group-hover:text-forest-light", currentSize.title)}>
-            {siteConfig.shortName}
+            {siteConfig.fullName}
           </span>
-          <span className={cn("text-charcoal/70", currentSize.subtitle)}>
+          <span className={cn("text-charcoal/75 tracking-tight font-medium", currentSize.subtitle)}>
             {siteConfig.positioning}
           </span>
         </div>
